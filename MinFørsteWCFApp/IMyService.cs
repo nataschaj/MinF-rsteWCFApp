@@ -10,11 +10,18 @@ namespace MinFørsteWCFApp
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
-    public interface IService1
+    public interface IMyService
     {
 
         [OperationContract]
         string GetData(int value);
+
+        [OperationContract]
+        string GetHurra();
+
+        //Når man kører den kan man ikke se den hvis  [OperationContract] mangler
+        [OperationContract]
+        string GetHurraHurra();
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
